@@ -1,4 +1,5 @@
 target_sources(${CORE_LIB_NAME}
     PRIVATE
-    my_project_name.cc
+    client.cc
+    server.cc
 )

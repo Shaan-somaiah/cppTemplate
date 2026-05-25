@@ -10,7 +10,7 @@ option(USE_GRPC "Use gRPC for remote procedure calls" OFF)
 
 ## Check if required packages are already installed, if not complile from source
 ## My internal cpp libraries 
-if(USE_MY_CPP_LIBRARIES)
+if(USE_CPP_LIBRARIES)
     if(USE_SYSTEM_PACKAGES)
         find_package(cppLibraries CONFIG QUIET)
     endif()

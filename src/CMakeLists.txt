@@ -12,7 +12,7 @@ if(USE_GRPC)
 endif()
 
 add_library(${CORE_LIB_NAME}
-    ${GENERATED_PROTO_SPECS}
+    ${GENERATED_PROTO_SRCS}
 )
 
 target_link_libraries(${CORE_LIB_NAME}
@@ -75,7 +75,7 @@ endif()
 
 ## Executable binary 
 add_executable(${APP_NAME}
-    main.cpp
+    main.cc
 )
 
 target_link_libraries(${APP_NAME}

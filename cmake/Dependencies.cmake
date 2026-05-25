@@ -12,7 +12,7 @@ option(USE_GRPC "Use gRPC for remote procedure calls" ON)
 ## My internal cpp libraries 
 if(USE_MY_CPP_LIBRARIES)
     if(USE_SYSTEM_PACKAGES)
-        find_package(cppLibraries CONFIG QUITE)
+        find_package(cppLibraries CONFIG QUIET)
     endif()
 
     if(NOT cppLibraries_FOUND)
@@ -38,7 +38,7 @@ endif()
 ## Google gflags library 
 if(USE_GFLAGS)
     if(USE_SYSTEM_PACKAGES)
-        find_package(gflags CONFIG QUITE)
+        find_package(gflags CONFIG QUIET)
     endif()
 
     if(NOT gflags_FOUND)
@@ -61,7 +61,7 @@ endif()
 ## Google logging library 
 if(USE_GLOG)
     if(USE_SYSTEM_PACKAGES)
-        find_package(glog CONFIG QUITE)
+        find_package(glog CONFIG QUIET)
     endif()
 
     if(NOT glog_FOUND)
@@ -85,8 +85,8 @@ endif()
 ## Generating code from proto defined in grpc.cmake
 if(USE_GRPC)
     if(USE_SYSTEM_PACKAGES)
-        find_package(Protobuf CONFIG QUITE)
-        find_package(gRPC CONFIG QUITE)
+        find_package(Protobuf CONFIG QUIET)
+        find_package(gRPC CONFIG QUIET)
     endif()
 
     if(NOT Protobuf_FOUND OR NOT gRPC_FOUND)

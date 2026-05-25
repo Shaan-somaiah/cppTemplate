@@ -1,9 +1,9 @@
 ## Top level cmake
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16)
 
 project(
     PROJECT_NAME
-    VERSION PROJECT_VERSION
+    VERSION 1.0.0
     LANGUAGES CXX
 )
 

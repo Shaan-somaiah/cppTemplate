@@ -1,0 +1,23 @@
+## Build directories
+build/
+build-*/
+
+## CMake generated
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+## Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+## Debug info
+*.dSYM/
+
+##vscode settings
+.vscode

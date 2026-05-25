@@ -6,7 +6,7 @@ option(USE_SYSTEM_PACKAGES "Use system packages instead of fetching dependencies
 option(USE_MY_CPP_LIBRARIES "Enable internal cppLibraries" ON)
 option(USE_GLOG "Use glog for logging" ON)
 option(USE_GFLAGS "Use gflags for command-line flag parsing" ON)
-option(USE_GRPC "Use gRPC for remote procedure calls" ON)
+option(USE_GRPC "Use gRPC for remote procedure calls" OFF)
 
 ## Check if required packages are already installed, if not complile from source
 ## My internal cpp libraries 

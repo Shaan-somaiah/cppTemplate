@@ -1,5 +1,10 @@
-namespace myProjectName{
+#ifndef MY_PROJECT_NAME_H
+#define  MY_PROJECT_NAME_H
 
-    void run();
+    namespace myProjectName {
 
-} // namespace myProjectName
+        void run();
+
+    } // namespace myProjectName
+
+#endif // MY_PROJECT_NAME_H

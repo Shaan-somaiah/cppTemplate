@@ -4,6 +4,6 @@
  
 DEFINE_string(log_message, "Sample log message", "Message to log");
 
-void myProjectName::run(){
+void myProjectName::run() {
     LOG(INFO) << "Log message: " << FLAGS_log_message;
 }

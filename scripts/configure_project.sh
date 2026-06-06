@@ -44,9 +44,8 @@ if [[ ! "${PROJECT_NAME}" =~ ^[a-z][a-z0-9_]*$ ]]; then
     exit 1
 fi
 
-########################################
-# Generate naming variants
-########################################
+
+## Generate naming variants
 
 PROJECT_NAME_SNAKE="${PROJECT_NAME}"
 
@@ -70,9 +69,9 @@ echo "  SNAKE : ${PROJECT_NAME_SNAKE}"
 echo "  UPPER : ${PROJECT_NAME_UPPER}"
 echo "  CAMEL : ${PROJECT_NAME_CAMEL}"
 
-########################################
-# Replace contents
-########################################
+
+## Replace contents
+
 
 echo
 echo "Replacing placeholders..."
@@ -87,9 +86,7 @@ find "${ROOT_DIR}" \
         -e "s/my_project_name/${PROJECT_NAME_SNAKE}/g" \
         {} +
 
-########################################
-# Rename files
-########################################
+## Rename files
 
 echo
 echo "Renaming files..."
@@ -113,9 +110,7 @@ while read -r path; do
     fi
 done
 
-########################################
-# Rename directories
-########################################
+## Rename directories
 
 echo
 echo "Renaming directories..."

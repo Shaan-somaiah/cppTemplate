@@ -7,7 +7,9 @@ ROOT_DIR="$(realpath "${SCRIPT_DIR}/..")"
 DEBUG_BUILD_DIR="$(realpath "${ROOT_DIR}/build-Debug")"
 RELEASE_BUILD_DIR="$(realpath "${ROOT_DIR}/build-Release")"
 BUILD_SYSTEM="Ninja"
-
+CPU_COUNT=$(nproc)
+PARALLELISM=$(( CPU_COUNT / 2 ))
+(( PARALLELISM < 1 )) && PARALLELISM=1
 
 print_usage() {
     echo "Usage:"
@@ -23,7 +25,7 @@ debug_build() {
         -G "$BUILD_SYSTEM" \
         -DCMAKE_BUILD_TYPE=Debug
 
-    cmake --build "$DEBUG_BUILD_DIR" --parallel "$(nproc)"
+    cmake --build "$DEBUG_BUILD_DIR" --parallel "$PARALLELISM"
 
 }
 
@@ -35,7 +37,7 @@ release_build() {
         -G "$BUILD_SYSTEM" \
         -DCMAKE_BUILD_TYPE=Release
 
-    cmake --build "$RELEASE_BUILD_DIR" --parallel "$(nproc)"
+    cmake --build "$RELEASE_BUILD_DIR" --parallel "$PARALLELISM"
 
 }
 
